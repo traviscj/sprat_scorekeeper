@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<h2>game scores</h2>
+<table>
+  <tr>
+    <th>round</hh>
+    {% for player in players %}
+    <th>{{ player }}</th>
+    {% endfor %}
+</tr>
+{% for round in rounds %}
+<tr>
+  <td>{{round}}</td>
+  {% for player in players %}
+  <td>{{ player_scores[player][round] }}</td>
+  {% endfor %}
+  </tr>
+{% endfor %}
+</table>
